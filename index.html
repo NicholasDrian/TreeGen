@@ -1,8 +1,25 @@
 <html>
 	<head>
 	</head>
+	<style>
+	div.header {
+		text-align: center;
+	}
+	div.paragraph {
+		
+	}
+	</style>
 	<body>
-		<h3>CS184/284A Project Webpages</h3>
+		<div class="header">
+			<h1>TreeGen</h1>
+			<h2>Parametric Tree Geniration for Rhino Grasshopper & Documentation</h2>
+			<h3>by Nick Drian</h3>
+		</div>
+		<div class="paragraph">
+			<p>
+				TreeGen
+			</p>
+		</div>>
 		<br><br>
 		<a href="/proj1/index.html">Project 1</a>
 		<br><br>
@@ -14,14 +31,4 @@
 		<br><br>
 		<a href="/proj4/index.html">Project 4</a>
 	</body>
-	<script>
-		var links = document.body.getElementsByTagName("a")
-		var a = window.location.href.indexOf(".io")
-		var repo_name = window.location.href.substring(a+3)
-		for(var i = 0; i < links.length; i++){
-			var link = links[i]
-			var actual_name = link.href.substring(link.href.indexOf(".io")+4)
-			link.href = repo_name + actual_name
-		}
-	</script>
 </html>
