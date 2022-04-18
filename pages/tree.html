@@ -19,8 +19,8 @@
         </div>
         <div class="links">
             <br><br>
-            <a href="../components/SubDTreeUI.gh" class="link" download>Download Deciduous Tree Generator</a>
-            <a href="../components/todo" class="link" download>Watch Tutorial Video</a>
+            <a href="../components/foliage.gh" class="link" download>Download Deciduous Tree Generator</a>
+            <a href="" class="link" download>Watch Tutorial Video</a>
             <br><br>
             <a href="../index.html" class="link">Home Page</a>
             <br><br>
@@ -86,7 +86,7 @@
                      <li>Foliage Generator Inputs</li>
                      <ul>
                          <li>
-                             Min Depth: This input defines the minimum branch depth that is allowed to spawn foliage.
+                             Min Depth: This input defines the minimum branch depth that is allowed to spawn foliage. The depth of a given branch segment is the maximum of the depths of its children. Segments with no children have depth 0.
                          </li>
                          <li> 
                              Curves: This input should be connected to the corresponding Tree Generator output.
@@ -122,9 +122,8 @@
                  </ul> 
             </p1>
         </div>
-        <h1>
-            Examples
-        </h1>
+        <h1 align="middle"> Examples: </h1>
+        <h2>Foliage Types</h2>
         <table class="image">
             <tr class="image">
                 <td class="image">
@@ -166,6 +165,7 @@
                 </td>
             </tr>
         </table>
+        <h2>Density</h2>
         <table>
             <tr class="image">
                 <td>
@@ -190,6 +190,7 @@
             </tr>
             <br>
         </table>
+        <h2>Canopy</h2>
         <table>
             <td>
                 <img class="image" src="../images/Canopy1.png" align="middle"  />
@@ -200,6 +201,7 @@
                 <figcaption align="middle">Canopy Example 2</figcaption>
             </td>
         </table>
+        <h2>Factor</h2>
         <table>
             <tr class="image">
                 <td>
@@ -218,6 +220,100 @@
                 </td>
             </tr>
         </table>
-        
+        <h2>Termination Odds</h2>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/termination1.png" align="middle"  />
+                    <figcaption align="middle">Termination Odds = 0</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/termination2.png" align="middle"  />
+                    <figcaption align="middle">Termination Odds = 0.1</figcaption>
+                </td>
+            </tr>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/termination3.png" align="middle"  />
+                    <figcaption align="middle">Termination Odds = 0.2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/termination4.png" align="middle"  />
+                    <figcaption align="middle">Termination Odds = 0.3</figcaption>
+                </td>
+            </tr>
+        </table>
+        <h2>Split Randomness</h2>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/split0.png" align="middle"  />
+                    <figcaption align="middle">Split Randomness = 0</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/split1.png" align="middle"  />
+                    <figcaption align="middle">Split Randomness = 0.1</figcaption>
+                </td>
+            </tr>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/split2.png" align="middle"  />
+                    <figcaption align="middle">Split Randomness = 0.2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/split5.png" align="middle"  />
+                    <figcaption align="middle">Split Randomness = 0.5</figcaption>
+                </td>
+            </tr>
+        </table>
+        <h2>Foliage Density</h2>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/foliageDensity05.png" align="middle"  />
+                    <figcaption align="middle">Foliage Density = 0.05</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliageDensity1.png" align="middle"  />
+                    <figcaption align="middle">Foliage Density = 0.1</figcaption>
+                </td>
+            </tr>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/foliageDensity2.png" align="middle"  />
+                    <figcaption align="middle">Foliage Density = 0.2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliageDensity5.png" align="middle"  />
+                    <figcaption align="middle">Foliage Density = 0.5</figcaption>
+                </td>
+            </tr>
+        </table>
+        <h2>Foliage Rotation</h2>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/foliageRotation0.png" align="middle"  />
+                    <figcaption align="middle">Foliage Rotation = 0</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliageRotation3141.png" align="middle"  />
+                    <figcaption align="middle">Foliage Rotation = PI</figcaption>
+                </td>
+            </tr>
+        </table>
+        <h2>Foliage Dimensions</h2>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/foliageLength5.png" align="middle"  />
+                    <figcaption align="middle">Length = 5, Width = 2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliageWidth5.png" align="middle"  />
+                    <figcaption align="middle">Length = 2, Width = 5</figcaption>
+                </td>
+            </tr>
+        </table>
 	</body>
 </html>
