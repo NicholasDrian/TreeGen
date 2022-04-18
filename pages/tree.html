@@ -6,7 +6,7 @@
 	<body class="body">
         <div class="header">
             <h1>
-                TreeGen - Deciduous Tree Generator
+                Deciduous Tree Generator
             </h1>
         </div>
         <div>
@@ -16,16 +16,208 @@
             <p1>
                 First, click download below to begin downloading the tree generation tools. Then open the downloaded file using Rhino. Once the program loads, a window should pop up in front of the Rhino viewport, and behind this window a tree should appear on the screen. Read further to learn how to customize the tree to suit your needs! 
             </p1>
-            <P>
-
-            </P>
         </div>
         <div class="links">
             <br><br>
             <a href="../components/SubDTreeUI.gh" class="link" download>Download Deciduous Tree Generator</a>
+            <a href="../components/todo" class="link" download>Watch Tutorial Video</a>
             <br><br>
             <a href="../index.html" class="link">Home Page</a>
             <br><br>
         </div>
+
+        <div>
+            <h2>
+                Details:
+            </h2>
+            <p1>
+                This tree generator consists of two main functions, "Deciduous Tree Generator" and "Foliage Generator". The first creates the trunk and the second generates a textured canopy.   
+            </p1>
+            <h2>
+                Parameters & Outputs:
+            </h2>
+            <p1>
+                 <ul>
+                     <li>Deciduous Tree Generator Inputs </li>
+                     <ul>
+                        <li> 
+                            Branch Density: This input defines the number of branches that are generated per unit of surface area of the input canopy. CAUTION: Make sure to use very small values when the surface area of the canopy is large. 
+                        </li>
+                        <li> 
+                            Canopy BRep: This input takes in one or more surfaces that represent the canopy of the tree. More specifically, these surfaces represent the places where branches will terminate. 
+                        </li>
+                        <li>
+                            Base Point: This input takes in a point that represents the base of the tree.  
+                        </li>
+                        <li>
+                            Factor: This input takes in a value between 0 and 1. This value defines the proportion of the distance that any branch segment will travel in the direction of its corresponding canopy. Each branch segment has its own factor randomly calculated to be between min_factor and max_factor. The best way to understand this input is through manipulation.
+                        </li>
+                        <li>
+                            Factor: This input takes in a value between 0 and 1. This value defines the proportion of the distance that any branch segment will travel in the direction of its corresponding canopy. The best way to understand this input is through manipulation.
+                        </li>
+                        <li>
+                            Noise: This input takes in a number representing the amount of randomness that is added to the position at which each branch terminates. If noise is 0, each branch will complete its path on the canopy surface. If noise is positive, branches will probably end up extending past the canopy, and negative values do the opposite. 
+                        </li>
+                        <li>
+                            Termination: Termination odds represent the proportion of the time a branch segment will have no children. This is for randomly thinning the tree tops. termination_depth is the minimum branch depth at which termination is allowed to happen. 
+                        </li>
+                        <li>
+                            Trunk Width: This input defines the trunk radius at the base of the tree. The radius along the tree diminishes proportional to the distance to the furthest child. 
+                        </li>
+                        <li>
+                            Help: This number takes in an integer and defines the corresponding instruction in the help output.
+                        </li>
+                     </ul>
+                     <li>Deciduous Tree Generator Outputs </li>
+                     <ul>
+                        <li>
+                            Help: Connect panel to this output to view text feedback. 
+                        </li>
+                        <li>
+                            Curves: This output contains the curvy skeleton of the tree that was generated. 
+                        </li>
+                        <li>
+                            Depths: This output contains the depths corresponding with each output curve. This output is for the purpose of foliage generation.
+                        </li>
+                        <li>
+                            Tree: This output contains the actual tree geometry. Right click and select bake to save this output into Rhino.
+                        </li>
+                     </ul>
+                     <li>Foliage Generator Inputs</li>
+                     <ul>
+                         <li>
+                             Min Depth: This input defines the minimum branch depth that is allowed to spawn foliage.
+                         </li>
+                         <li> 
+                             Curves: This input should be connected to the corresponding Tree Generator output.
+                         </li>
+                        <li>
+                            Curves: This input should be connected to the corresponding Tree Generator output. 
+                        </li>
+                        <li>
+                            Density: This input defines the number of foliage textures generated per unit of branch length.
+                        </li>
+                        <li>
+                            Randomness: This input defines how regularly spaced the foliage positioning is.
+                        </li>
+                        <li>
+                            Length: The length of each textured polygon.
+                        </li>
+                        <li>
+                            Width: The length of each textured polygon.
+                        </li>
+                        <li>
+                            Random Rotation: This input defines the rotational randomness in radians.
+                        </li>
+                        <li>
+                            Foliage Type: This input takes in integers 1 - 7 and produces different textures. 
+                        </li>
+                     </ul>
+                     <li>Foliage Generator Outputs</li>
+                     <ul>
+                         <li>
+                             Outputs should remain plugged into the Custom Preview Materials function from the example document. 
+                         </li>
+                     </ul>
+                 </ul> 
+            </p1>
+        </div>
+        <h1>
+            Examples
+        </h1>
+        <table class="image">
+            <tr class="image">
+                <td class="image">
+                    <img class="image" src="../images/foliage1.png" align="middle"  />
+                    <figcaption align="middle">foliage type 1</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliage2.png" align="middle"  />
+                    <figcaption align="middle">foliage type 2</figcaption>
+                </td>
+            </tr>
+            <br>
+            <tr class="image">
+                <td class="image">
+                    <img class="image" src="../images/foliage3.png" align="middle"  />
+                    <figcaption align="middle">foliage type 3</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliage4.png" align="middle"  />
+                    <figcaption align="middle">foliage type 4</figcaption>
+                </td>
+            </tr>
+            <br>
+            <tr class="image">
+                <td class="image">
+                    <img class="image" src="../images/foliage5.png" align="middle"  />
+                    <figcaption align="middle">foliage type 5</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/foliage6.png" align="middle"  />
+                    <figcaption align="middle">foliage type 6</figcaption>
+                </td>
+                
+            </tr>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/foliage7.png" align="middle"  />
+                    <figcaption align="middle">foliage type 7</figcaption>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/density02.png" align="middle"  />
+                    <figcaption align="middle">density 0.02</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/density10.png" align="middle"  />
+                    <figcaption align="middle">density 0.1</figcaption>
+                </td>
+            </tr>
+            <br>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/density20.png" align="middle"  />
+                    <figcaption align="middle">density 0.2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/density1.png" align="middle"  />
+                    <figcaption align="middle">density 1</figcaption>
+                </td>
+            </tr>
+            <br>
+        </table>
+        <table>
+            <td>
+                <img class="image" src="../images/Canopy1.png" align="middle"  />
+                <figcaption align="middle">Canopy Example 1</figcaption>
+            </td>
+            <td>
+                <img class="image" src="../images/Canopy2.png" align="middle"  />
+                <figcaption align="middle">Canopy Example 2</figcaption>
+            </td>
+        </table>
+        <table>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/factor02.png" align="middle"  />
+                    <figcaption align="middle">Min and Max Factor = 0.2</figcaption>
+                </td>
+                <td>
+                    <img class="image" src="../images/factor05.png" align="middle"  />
+                    <figcaption align="middle">Min and Max Factor = 0.5</figcaption>
+                </td>
+            </tr>
+            <tr class="image">
+                <td>
+                    <img class="image" src="../images/factor0205.png" align="middle"  />
+                    <figcaption align="middle">Min Factor = 0.2, Max Factor = 0.5</figcaption>
+                </td>
+            </tr>
+        </table>
+        
 	</body>
 </html>

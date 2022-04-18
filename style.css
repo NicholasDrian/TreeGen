@@ -1,17 +1,39 @@
+
+
 .header {
     text-align: center;
-    color: darkgreen;
+    color: rgb(136, 201, 255);
 }
 .body {
-    
+    background-color: #023e52; 
+    color:rgb(167, 217, 242);
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .links {
     text-align: center;
 }
+.bigLink {
+    font-size: 30px; 
+    color: #023e52; 
+    background-color: rgb(76, 191, 249);
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
 .link {
-    margin-right: 5px;
-    margin-left: 5px;
-    font-size: 30px;
+    font-size: 20px; 
+    color: #023e52; 
+    background-color: rgb(171, 227, 255);
+    border: none;  
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
 }
 .image {
     max-width: 99%;
