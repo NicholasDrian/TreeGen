@@ -22,10 +22,138 @@
         </div>
         <div class="links">
             <br><br>
-            <a href="../components/TreeGen(Pine).gh" class="link" download>Download Pine Tree Generator</a>
+            <a href="../components/TreeGen(Pine).gh" class="link" download>Download</a>
+            <a href="" class="link" download>Watch Tutorial Video</a>
             <br><br>
             <a href="../index.html" class="link">Home Page</a>
             <br><br>
         </div>
+
+        <div>
+            <h2>
+                Details:
+            </h2>
+            <p1>
+                This tree generator is for mimicking the structure of pine trees. It generates a parametric trunk, parametric primary branches, and parametric secondary branches. primary branches are children of the trunk and secondary branches are children of primary branches. Because of the number of different branch types, this generator requires significantly more parameterization that the deciduous tree generator. The main functions of contained within the download are generators for all of the different branch types. Notably, there function for adding squiggles and foliage to branches. 
+            </p1>
+            <h2>
+                Parameters & Outputs:
+            </h2>
+            <p1>
+                 <ul>
+                     <li>Generate Trunk</li>
+                     <ul>
+                        <li> 
+                            Root: This input takes in a point representing the location of the base of the tree.
+                        </li>
+                        <li>
+                            Height: This input indicates the height of the trunk.
+                        </li>
+                        <li>
+                            Squiggle Count: This input defines the number of control points of the trunk.
+                        </li>
+                        <li>
+                            Squigglyness: This input defines the range of possible distortion of control points. 
+                        </li>
+                        <li>
+                            Seed: This input allows for repeatable randomness and for new trees to be generated.
+                        </li>
+                        <li>
+                            Base Radius: This input defines the radius of the base of the trunk.
+                        </li>
+                        <li>
+                            Profile Radii: These inputs define the radius of the trunk at evenly spaced intervals, relative to the base radius.
+                        </li>
+                     </ul>
+                     <li>Primary Branches</li>
+                     <ul>
+                        <li> 
+                            Trunk Wire: This defines the trunk to add branches to.
+                        </li>
+                        <li>
+                            Radial Branch Count: This input defines the number of branches per vertical level of the tree. 
+                        </li>
+                        <li>
+                            Width: This parameter defines the width of the widest part of the tree. 
+                        </li>
+                        <li>
+                            Base Branch Height: This input defines the height of the base of the lowest branch. 
+                        </li>
+                        <li>
+                            Angle: This input defines the angle of drupe of the branch.
+                        </li>
+                        <li>
+                            Rotational Randomness: This input represents the range of possible rotations of each branch around the trunk. The units are degrees.
+                        </li>
+                        <li>
+                            Vertical Randomness: This input should also be in the range [0-1] and represents the amount of randomness applied to the vertical placement of each branch
+                        </li>
+                        <li>
+                            Length Randomness: This input should be from [0-1]. 0 represents uniform and exact length. 1 represents random length between 0 and 2x.
+                        </li>
+                        <li>
+                            Seed: This input can be changed to create random yet repeatable results. 
+                        </li>
+                        <li>
+                            Profile Radii: The number of profile radii is equal to the number of vertical branch levels. Each radius corresponds to the average branch length at the corresponding vertical branch level. 
+                        </li>
+                     </ul>
+                     <li>Secondary Branches</li>
+                     <ul>
+                        <li> 
+                            Curves: These are the curves of the primary branches that spawn secondary branches. 
+                        </li>
+                        <li>
+                            Density: This input represents the number of secondary branches spawned per unit length of primary branch.
+                        </li>
+                        <li>
+                            Drupe: This input defines the amount that the tip of a branch might drupe or angle upward.
+                        </li>
+                        <li>
+                            Rotation: This parameter defines the range of random rotation.
+                        </li>
+                        <li>
+                            Length: This parameter defines the length of secondary branches relative the length of their parent branch and relative to the position of the primary branch. 
+                        </li>
+                        <li>
+                            Seed: This input can be changed to generate a new and repeatable result.
+                        </li>
+                     </ul>
+                     <li>Add Squiggles</li>
+                     <ul>
+                         <li>
+                             Wires: This input should contain curves that represent branches.
+                         </li>
+                        <li> 
+                            Branch Squigglyness: This input defines the magnitude of distortion.
+                        </li>
+                        <li> 
+                            Squiggle Density: This input defines the number of control points of the output branch per unit length.
+                        </li>
+                        <li>
+                            Seed: Allows for repeatable random results. Changing this input will create a new output.
+                        </li>
+                     </ul>
+                 </ul> 
+            </p1>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</body>
 </html>
